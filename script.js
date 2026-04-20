@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupImageClickHandlers(); // Setup click handlers after images are rendered
     optimizeForMobile();
   }, 150);
-  console.log("🧸 MAMEhmej_Topia is ready! Click any photo to enlarge! 📸 WhatsApp: 81239091 / 03562494");
+  console.log("MAMEhmej_Topia is ready! Click any photo to enlarge! WhatsApp: 81239091 / 03562494");
 });
 
 // Sale ribbon rotation
@@ -338,7 +338,7 @@ function updateSaleRibbon() {
   if (ribbon) {
     const messages = [
       "TOY SALE! ",
-      " Ask on WhatsApp!",
+      "Ask on WhatsApp!",
       "Contact us now!",
       "LIMITED STOCK!",
       "Click on any toy photo to see it bigger!"
