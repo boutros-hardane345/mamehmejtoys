@@ -38,7 +38,7 @@ const toysList = [
 // Helper: Generate WhatsApp link with proper message
 function getWhatsLink(toyName, price, numberCode) {
   let phone = numberCode === "96181239091" ? "96181239091" : "96103562494";
-  let message = `🎈 Hello! I'm interested in buying "${toyName}" (${price}) from MAMEhmej_Topia. Is it available? I'd love to order! 🧸🎁`;
+  let message = `Hello! I'm interested in buying "${toyName}" (${price}) from MAMEhmej_Topia. Is it available? I'd love to order!`;
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
@@ -337,11 +337,11 @@ function updateSaleRibbon() {
   const ribbon = document.querySelector('.sale-ribbon span');
   if (ribbon) {
     const messages = [
-      "🎈 MEGA TOY SALE! 🎈 WhatsApp to order – Fast Delivery! 🧸",
-      "✨ BUY 2 GET 10% OFF! ✨ Ask on WhatsApp! 📱",
-      "🎁 FREE GIFT with every order! 🎁 Contact us now!",
-      "🧸 LIMITED STOCK! Order via WhatsApp today! 🚀",
-      "📸 Click on any toy photo to see it bigger! 🔍"
+      "MEGA TOY SALE! WhatsApp to order – Fast Delivery! ",
+      "BUY 2 GET 10% OFF! Ask on WhatsApp! ",
+      "FREE GIFT with every order! Contact us now!",
+      "LIMITED STOCK! Order via WhatsApp today!",
+      "Click on any toy photo to see it bigger!"
     ];
     let index = 0;
     setInterval(() => {
