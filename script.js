@@ -337,10 +337,10 @@ function updateSaleRibbon() {
   const ribbon = document.querySelector('.sale-ribbon span');
   if (ribbon) {
     const messages = [
-      "MEGA TOY SALE! WhatsApp to order – Fast Delivery! ",
-      "BUY 2 GET 10% OFF! Ask on WhatsApp! ",
-      "FREE GIFT with every order! Contact us now!",
-      "LIMITED STOCK! Order via WhatsApp today!",
+      "TOY SALE! ",
+      " Ask on WhatsApp!",
+      "Contact us now!",
+      "LIMITED STOCK!",
       "Click on any toy photo to see it bigger!"
     ];
     let index = 0;
