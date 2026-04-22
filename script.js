@@ -31,7 +31,6 @@ const toysList = [
   { name: "DIY Bracelets", price: "$9", img: "images/bracelets.jpg", waNumber: "96103562494" },
   { name: "J'apprends ABC", price: "$10", img: "images/abc.jpg", waNumber: "96103562494" },
   { name: "Electronic Organ", price: "$8", img: "images/electronicorgan.jpg", waNumber: "96103562494" },
-  { name: "Fishing", price: "$10", img: "images/fishing.jpg", waNumber: "96103562494" },
   { name: "Snack", price: "$10", img: "images/snack.jpg", waNumber: "96103562494" }
 ];
 
