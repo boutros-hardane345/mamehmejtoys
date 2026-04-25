@@ -17,7 +17,7 @@ const toysList = [
   { name: "Baby Sweet Love", price: "$10", img: "images/babydoll.jpg", waNumber: "96103562494" },
   { name: "Bowling", price: "$10", img: "images/bowlingfun.jpg", waNumber: "96103562494" },
   { name: "Pretty Animals Small", price: "$8", img: "images/prettyanimalssmall.jpg", waNumber: "96103562494" },
-  { name: "Connect 4", price: "Price TBD", img: "images/connect4.jpeg", waNumber: "96103562494" },
+  { name: "Connect 4", price: "$6", img: "images/connect4.jpeg", waNumber: "96103562494" },
   { name: "Happy Gina", price: "$8", img: "images/happygina.jpg", waNumber: "96103562494" },
   { name: "Color n Style", price: "$8", img: "images/colornstyle.jpg", waNumber: "96103562494" },
   { name: "Educational Toy Set", price: "$8", img: "images/educationaltoy.jpg", waNumber: "96103562494" },
@@ -25,12 +25,12 @@ const toysList = [
   { name: "Unicorn Bank", price: "$8", img: "images/unicornjar.jpg", waNumber: "96103562494" },
   { name: "Hair Beader", price: "$8", img: "images/hair-beader.jpg", waNumber: "96103562494" },
   { name: "Singer Star", price: "$8", img: "images/singstar.jpg", waNumber: "96103562494" },
-  { name: "Melody Ball", price: "Price TBD", img: "images/ballon.jpg", waNumber: "96103562494" },
+  { name: "Melody Ball", price: "$6", img: "images/ballon.jpg", waNumber: "96103562494" },
   { name: "Book", price: "$10", img: "images/musicbook.jpg", waNumber: "96103562494" },
   { name: "Fashion Creative", price: "$8", img: "images/fashioncreative.jpg", waNumber: "96103562494" },
   { name: "DIY Bracelets", price: "$9", img: "images/bracelets.jpg", waNumber: "96103562494" },
   { name: "J'apprends ABC", price: "$10", img: "images/abc.jpg", waNumber: "96103562494" },
-  { name: "Electronic Organ", price: "$8", img: "images/electronicorgan.jpg", waNumber: "96103562494" },
+  { name: "Electronic Organ", price: "$12", img: "images/electronicorgan.jpg", waNumber: "96103562494" },
   { name: "Snack", price: "$10", img: "images/snack.jpg", waNumber: "96103562494" }
 ];
 
