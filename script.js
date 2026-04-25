@@ -25,7 +25,7 @@ const toysList = [
   { name: "Unicorn Bank", price: "$8", img: "images/unicornjar.jpg", waNumber: "96103562494" },
   { name: "Hair Beader", price: "$8", img: "images/hair-beader.jpg", waNumber: "96103562494" },
   { name: "Singer Star", price: "$8", img: "images/singstar.jpg", waNumber: "96103562494" },
-  { name: "Melody Ball", price: "$6", img: "images/ballon.jpg", waNumber: "96103562494" },
+  { name: "Melody Ball", price: "$15", img: "images/ballon.jpg", waNumber: "96103562494" },
   { name: "Book", price: "$10", img: "images/musicbook.jpg", waNumber: "96103562494" },
   { name: "Fashion Creative", price: "$8", img: "images/fashioncreative.jpg", waNumber: "96103562494" },
   { name: "DIY Bracelets", price: "$9", img: "images/bracelets.jpg", waNumber: "96103562494" },
