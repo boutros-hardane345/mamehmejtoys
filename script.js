@@ -8,7 +8,7 @@ const toysList = [
   { name: "Drawing Board", price: "$15", img: "images/drawingboard.jpg", waNumber: "96103562494" },
   { name: "Pretty Animals Big", price: "$15", img: "images/prettyanimalsbig.jpg", waNumber: "96103562494" },
   { name: "Building Block Car", price: "$20", img: "images/buildingcar.jpg", waNumber: "96103562494" },
-  { name: "Metal Models", price: "$20", img: "images/metalmodels.jpg", waNumber: "96103562494" },
+  { name: "Metal Models", price: "SOLD OUT", img: "images/metalmodels.jpg", waNumber: "96103562494" },
   { name: "Magnetic", price: "$10", img: "images/magnetictiles.jpg", waNumber: "96103562494" },
   { name: "Fold High", price: "$10", img: "images/woodblocks.jpg", waNumber: "96103562494" },
   { name: "DIY Earphones", price: "$10", img: "images/diyearphones.jpg", waNumber: "96103562494" },
@@ -21,7 +21,7 @@ const toysList = [
   { name: "Happy Gina", price: "$8", img: "images/happygina.jpg", waNumber: "96103562494" },
   { name: "Color n Style", price: "$8", img: "images/colornstyle.jpg", waNumber: "96103562494" },
   { name: "Educational Toy Set", price: "$8", img: "images/educationaltoy.jpg", waNumber: "96103562494" },
-  { name: "Pom Pom Bag", price: "$9", img: "images/pompombag.jpg", waNumber: "96103562494" },
+  { name: "Pom Pom Bag", price: "SOLD OUT", img: "images/pompombag.jpg" },
   { name: "Unicorn Bank", price: "$8", img: "images/unicornjar.jpg", waNumber: "96103562494" },
   { name: "Hair Beader", price: "$8", img: "images/hair-beader.jpg", waNumber: "96103562494" },
   { name: "Singer Star", price: "$8", img: "images/singstar.jpg", waNumber: "96103562494" },
@@ -31,8 +31,17 @@ const toysList = [
   { name: "DIY Bracelets", price: "$9", img: "images/bracelets.jpg", waNumber: "96103562494" },
   { name: "J'apprends ABC", price: "$10", img: "images/abc.jpg", waNumber: "96103562494" },
   { name: "Electronic Organ", price: "$12", img: "images/electronicorgan.jpg", waNumber: "96103562494" },
-  { name: "Snack", price: "$10", img: "images/snack.jpg", waNumber: "96103562494" }
+  { name: "Snake", price: "$10", img: "images/snake.jpg", waNumber: "96103562494" },
+  { name: "Building Block Drum", price: "$8", img: "images/buildingblockdrum.png", waNumber: "96103562494"},
+  { name: "Manicure", price: "$8", img: "images/manicure.png", waNumber: "96103562494" },
+  { name: "Police Car Book", price: "$10", img: "images/policecarbook.png", waNumber: "96103562494"},
+  { name: "Fish Farming", price: "$12", img: "images/fishfarming.png", waNumber: "96103562494" },
 ];
+
+// Helper function to check if item is sold out
+function isSoldOut(price) {
+  return price === "SOLD OUT" || price === "Sold Out" || price === "sold out";
+}
 
 // Helper: Generate WhatsApp link with proper message
 function getWhatsLink(toyName, price, numberCode) {
@@ -262,19 +271,32 @@ function renderToys() {
     
     const priceSpan = document.createElement("div");
     priceSpan.className = "toy-price";
+    // Add special class for SOLD OUT items
+    if (isSoldOut(toy.price)) {
+      priceSpan.classList.add("sold-out-price");
+    }
     priceSpan.innerText = toy.price;
     
-    const buyBtn = document.createElement("a");
-    buyBtn.className = "buy-wa-btn";
-    buyBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Click & buy!';
-    const whatsLink = getWhatsLink(toy.name, toy.price, toy.waNumber);
-    buyBtn.href = whatsLink;
-    buyBtn.target = "_blank";
-    buyBtn.setAttribute("aria-label", `Buy ${toy.name} via WhatsApp`);
+    // ONLY create and add buy button if NOT sold out
+    if (!isSoldOut(toy.price)) {
+      const buyBtn = document.createElement("a");
+      buyBtn.className = "buy-wa-btn";
+      buyBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Click & buy!';
+      const whatsLink = getWhatsLink(toy.name, toy.price, toy.waNumber);
+      buyBtn.href = whatsLink;
+      buyBtn.target = "_blank";
+      buyBtn.setAttribute("aria-label", `Buy ${toy.name} via WhatsApp`);
+      infoDiv.appendChild(buyBtn);
+    } else {
+      // Add a "sold out" badge/message
+      const soldOutMsg = document.createElement("div");
+      soldOutMsg.className = "sold-out-message";
+      soldOutMsg.innerHTML = '<i class="fas fa-ban"></i> Currently Unavailable';
+      infoDiv.appendChild(soldOutMsg);
+    }
     
     infoDiv.appendChild(titleSpan);
     infoDiv.appendChild(priceSpan);
-    infoDiv.appendChild(buyBtn);
     card.appendChild(imgDiv);
     card.appendChild(infoDiv);
     container.appendChild(card);

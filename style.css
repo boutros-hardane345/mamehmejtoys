@@ -634,3 +634,37 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff6b3d;
 }
+
+/* SOLD OUT styles */
+.sold-out-price {
+  background: #dc3545 !important;
+  color: white !important;
+  text-decoration: line-through;
+}
+
+.sold-out-message {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6c757d;
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  width: 100%;
+  cursor: not-allowed;
+}
+
+.sold-out-message i {
+  font-size: 0.9rem;
+}
+
+/* Optional: dim the card slightly for sold out items */
+.toy-card:has(.sold-out-message) {
+  opacity: 0.85;
+  filter: grayscale(0.1);
+}
